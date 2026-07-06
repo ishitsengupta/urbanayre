@@ -5,19 +5,25 @@ import { Sun, Moon } from "lucide-react";
 import { useTheme } from 'next-themes'
 
 export default function ThemeToggle() {
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme, resolvedTheme } = useTheme()
+
+  useEffect(() => {
+  const saved = localStorage.getItem('theme')
+  if (saved) setTheme(saved)
+}, [])
+
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => setMounted(true), [])
   if (!mounted) return null
 
-  const isDark = theme === 'dark'
+  const isDark = resolvedTheme === 'dark'
 
   return (
     <button
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
       className={`relative cursor-pointer flex h-9 w-16 items-center rounded-full border-[1.5px] transition-colors duration-300 ${
-        isDark ? "bg-glass border-dark-accent" : "bg-glass border-accent"
+        isDark ? "bg-dark-glass border-dark-accent" : "bg-glass border-accent"
       }`}
     >
       <span

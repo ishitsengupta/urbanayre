@@ -1,10 +1,11 @@
 "use client";
 import Image from 'next/image';
 import { Star, Layers, Code2 } from "lucide-react";
+import { useEffect, useState } from "react";
 import { useTheme } from 'next-themes'
 
 interface cardprops{
-    imageURL: string,
+    icon: string,
     imageAlt: string,
     title: string,
     desc: string,
@@ -17,9 +18,20 @@ interface cardprops{
     note: string,
 }
 
-export default function SkillCard({imageURL, imageAlt, title, desc, level, num, prof, exp, about, color, note}:cardprops){
-    const { theme } = useTheme()
-    const isDark = theme === 'dark'
+export default function SkillCard({icon, imageAlt, title, desc, level, num, prof, exp, about, color, note}:cardprops){
+    const { theme, setTheme, resolvedTheme } = useTheme()
+
+  useEffect(() => {
+  const saved = localStorage.getItem('theme')
+  if (saved) setTheme(saved)
+}, [])
+
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => setMounted(true), [])
+  if (!mounted) return null
+
+  const isDark = resolvedTheme === 'dark'
     return(
         <div className="relative w-full max-w-md rounded-2xl dark:border dark:border-dark-accent border border-accent p-8 dark:shadow-[0_8px_32px_rgba(0,0,0,0.35)] shadow-[0_8px_32px_rgba(26,26,24,0.05)]" style={{
   background: isDark
@@ -29,7 +41,7 @@ export default function SkillCard({imageURL, imageAlt, title, desc, level, num, 
       
       {/* icon box */}
       <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl dark:bg-dark-glass bg-glass dark:border dark:border-dark-accent border border-accent">
-        <Image src={imageURL} alt={imageAlt} height={60} width={60}></Image>
+        <Image src={icon} alt={imageAlt} height={60} width={60}></Image>
       </div>
 
       {/* expert badge */}

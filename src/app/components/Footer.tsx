@@ -19,6 +19,7 @@ export default function Footer() {
 
           <nav className="footer-links">
             <NavLink href="/" children="Home" />
+            <NavLink href="/skill" children="Skills" />
             <NavLink href="/project" children="Work" />
             <NavLink href="/about" children="About" />
             <NavLink href="/contacts" children="Contact" />

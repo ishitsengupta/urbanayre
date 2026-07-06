@@ -8,9 +8,9 @@
   --text-muted: #a8a59a;
   --accent: #c19a5b;
   --accent-dark: #8f6f3a;
-  --glass-bg: rgba(255, 255, 255, 0.5);
-  --glass-border: rgba(255, 255, 255, 0.65);
-  --card-shadow: 0 8px 32px rgba(26, 26, 24, 0.05);
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.21);
+  --card-shadow: 0 8px 32px rgba(26, 26, 24, 0.35);
   --radius: 18px;
   --font-serif: 'Fraunces', Georgia, sans-serif;
   --dark-bg: #14130f;
@@ -59,8 +59,8 @@
 @theme {
   --color-bg: #f2f0eb;
   --color-bg-2: #e8e5de;
-  --color-glass: rgba(255,255,255,0.5);
-  --color-glass-border: rgba(255,255,255,0.65);
+  --color-glass: rgba(255,255,255,0.06);
+  --color-glass-border: rgba(255,255,255,0.21);
   --color-text-primary: #1a1a18;
   --color-text-secondary: #8c897f;
   --color-text-muted: #a8a59a;

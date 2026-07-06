@@ -20,6 +20,10 @@ export default function Home(){
         <div className='flex flex-col'>
             <div className="flex flex-row">
             <div className="flex flex-col px-15 py-5 gap-[15px]">
+                <div className="w-max flex items-center gap-2 rounded-full dark:border dark:border-dark-accent border border-accent dark:bg-dark-glass bg-glass px-4 py-1.5">
+                  <span className="h-2 w-2 rounded-full" style={{background: beginner}} />
+                  <span className="text-sm font-serif font-medium dark:text-dark-text-primary text-text-primary">Under Construction</span>
+                </div>
                 <h1 className="introtext">Hi, I&apos;m <span className="text-[#c19a5b] dark:text-[#5b7ec1]">Ishit</span> <p>Full Stack Developer</p></h1>
                 <p className="introtext1">On a mission to learn many different frameworks and build projects on it</p>
                 <div className='flex flex-row gap-[20px] mt-[10px]'>
@@ -66,17 +70,17 @@ export default function Home(){
             <p className='text-[12px] font-[500] dark:text-dark-secondary text-text-secondary tracking-[1px] font-serif italic mb-2'>My Goto stack for full stack web development</p>
         </div>
         <div className='grid grid-cols-3 mx-8 my-8 gap-[15px]'>
-            <SkillCard title='React' imageAlt='react-logo' imageURL='/react.svg' desc='Javascript Framework' level='Intermediate' about='Using Reusable UI Components and Making Interactive Frontend Designs.' prof="60%" num={3} exp={1} color={mediocre} note='Getting Better Steadily' />
-            <SkillCard title='Next.Js' imageAlt='nextjs-logo' imageURL='/nextjs.svg' desc='React Framework' level='Intermediate' about='Better Way to Use React With SSR to Make Webpages Load Faster and SEO Better.' prof="50%" num={2} exp={1} color={mediocre} note='Getting Better Steadily' />
-            <SkillCard title='TypeScript' imageAlt='typescript logo' imageURL='/typescript.svg' desc='Typed Javascript' level='Intermediate' about='JavaScript with Type Checks to Avoid Errors at Runtime.' prof="50%" num={2} exp={1} color={mediocre} note='Getting Better Steadily' />
-            <SkillCard title='Node.Js' imageAlt='node-logo' imageURL='/node.svg' desc='Javascript Runtime' level='Intermediate' about='Runtime Used For Javascript' prof="60%" num={3} exp={2} color={mediocre} note='Getting Better Steadily' />
-            <SkillCard title='Python' imageAlt='python-logo' imageURL='/python.svg' desc='Programming Language' level='Expert' about='General-purpose language with clean syntax, heavy use in AI/ML and backend scripting.' prof="90%" num={1} exp={5} color={expert} note='Highly Proficient' />
-            <SkillCard title='Tailwind' imageAlt='tailwind-logo' imageURL='/tailwind.svg' desc='CSS Framework' level='Intermediate' about='Utility First CSS Framework For Rapid UI Building' prof="60%" num={3} exp={1} color={mediocre} note='Getting Better Steadily' />
-            <SkillCard title='JavaScript' imageAlt='javascript-logo' imageURL='/javascript.svg' desc='Programming Language' level='Intermediate' about='Vanilla JS Used in Web Development Along With HTML and CSS' prof="60%" num={3} exp={2} color={mediocre} note='Getting Better Steadily' />
-            <SkillCard title='MongoDB' imageAlt='mongo-logo' imageURL='/mongodb.svg' desc='NoSQL Database' level='Beginner' about='NoSQL DataBase Used to Store Data in a JSON Like Format.' prof="30%" num={0} exp={1} color={beginner} note='Getting Better Steadily' />
-            <SkillCard title='Git' imageAlt='git-logo' imageURL='/git.svg' desc='Version Control' level='Expert' about='Github Framework, Tracks Changes on Your Repositories.' prof="95%" num={3} exp={2} color={expert} note='Highly Proficient' />
+            <SkillCard title='React' imageAlt='react-logo' icon='/react.svg' desc='Javascript Framework' level='Intermediate' about='Using Reusable UI Components and Making Interactive Frontend Designs.' prof="60%" num={3} exp={1} color={mediocre} note='Getting Better Steadily' />
+            <SkillCard title='Next.Js' imageAlt='nextjs-logo' icon='/nextjs.svg' desc='React Framework' level='Intermediate' about='Better Way to Use React With SSR to Make Webpages Load Faster and SEO Better.' prof="50%" num={2} exp={1} color={mediocre} note='Getting Better Steadily' />
+            <SkillCard title='TypeScript' imageAlt='typescript logo' icon='/typescript.svg' desc='Typed Javascript' level='Intermediate' about='JavaScript with Type Checks to Avoid Errors at Runtime.' prof="50%" num={2} exp={1} color={mediocre} note='Getting Better Steadily' />
+            <SkillCard title='Node.Js' imageAlt='node-logo' icon='/node.svg' desc='Javascript Runtime' level='Intermediate' about='Runtime Used For Javascript' prof="60%" num={3} exp={2} color={mediocre} note='Getting Better Steadily' />
+            <SkillCard title='Python' imageAlt='python-logo' icon='/python.svg' desc='Programming Language' level='Expert' about='General-purpose language with clean syntax, heavy use in AI/ML and backend scripting.' prof="90%" num={1} exp={5} color={expert} note='Highly Proficient' />
+            <SkillCard title='Tailwind' imageAlt='tailwind-logo' icon='/tailwind.svg' desc='CSS Framework' level='Intermediate' about='Utility First CSS Framework For Rapid UI Building' prof="75%" num={3} exp={1} color={mediocre} note='Getting Better Steadily' />
+            <SkillCard title='JavaScript' imageAlt='javascript-logo' icon='/javascript.svg' desc='Programming Language' level='Intermediate' about='Vanilla JS Used in Web Development Along With HTML and CSS' prof="60%" num={3} exp={2} color={mediocre} note='Getting Better Steadily' />
+            <SkillCard title='MongoDB' imageAlt='mongo-logo' icon='/mongodb.svg' desc='NoSQL Database' level='Beginner' about='NoSQL DataBase Used to Store Data in a JSON Like Format.' prof="30%" num={0} exp={1} color={beginner} note='Getting Better Steadily' />
+            <SkillCard title='Git' imageAlt='git-logo' icon='/git.svg' desc='Version Control' level='Expert' about='Github Framework, Tracks Changes on Your Repositories.' prof="95%" num={3} exp={2} color={expert} note='Highly Proficient' />
         </div>
-        <div className='overflow-hidden justify-center items-center my-10 mx-auto h-auto w-auto'>
+        <div className='justify-center items-center my-10 mx-auto h-auto w-auto'>
             <button onClick={() => router.push('/skill')} className="group flex items-center gap-2 rounded-full dark:bg-dark-accent bg-[#c19a5b] px-6 py-3 text-sm font-medium dark:text-dark-text-primary text-text-primary transition-transform duration-200 hover:scale-[1.03] hover:bg-[#c19a5b] dark:hover:bg-dark-accent-dark active:scale-95 cursor-pointer">
                         View All Skills
                         <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />

@@ -7,10 +7,11 @@ export default function Navbar(){
             <div>
                 <a href="/" className="Navbar-headline">Portfolio</a>
             </div>
-            <div className="mr-[10%] flex flex-row gap-[40px] mb-[10px] mt-auto pb-3 font-serif ">
+            <div className="mr-[10%] flex flex-row gap-[40px] mb-[10px] mt-auto pb-3 font-serif">
                 <NavLink href="/" children="Home" />
                 <NavLink href="/skill" children="Arsenal" />
                 <NavLink href="/project" children="Projects" />
+                <NavLink href="/about" children="About" />
                 <NavLink href="/contacts" children="Contact" />
             </div>
             <div className="mr-[20px] mb-[14px] mt-auto pb-3">
