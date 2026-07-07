@@ -33,7 +33,7 @@ export default function Skill(){
                     <h1 className="font-serif text-text-primary dark:text-dark-text-primary text-[64px] font-[600] mb-[3px]">Tech Stacks & <span className="text-accent dark:text-dark-accent">Skills</span></h1>
                     <p className="font-serif text-text-secondary dark:text-dark-text-secondary font-[300] text-[20px]">Tech Stacks and Skills I Use to Bring my Ideas to Life.</p>
                 </div>
-                <div className="overflow-hidden flex flex-wrap items-center justify-between rounded-2xl dark:border dark:border-dark-accent border border-accent dark:bg-dark-glass bg-glass p-4 backdrop-blur-[6px] my-15 mr-15 ml-auto">
+                <div className="overflow-hidden flex flex-wrap items-center justify-between rounded-md dark:border dark:border-dark-accent border border-accent dark:bg-dark-glass bg-glass p-4 backdrop-blur-[6px] my-15 mr-15 ml-auto">
                     {Skills.map(({ title, desc }, i) => (
                         <div key={title} className={`overflow-hidden flex flex-col items-center gap-2 px-4 py-2 ${i !== 0 ? "border-l border-text-secondary dark:border-l dark:border-dark-text-secondary" : ""}`}>
                             <div className="overflow-hidden flex h-10 w-10 items-center justify-center font-serif text-[30px] text-text-primary dark:text-dark-text-primary">
@@ -47,7 +47,7 @@ export default function Skill(){
                 </div>
             </div>
             <div className="flex flex-col mt-5 mb-15">
-                <div className="flex justify-center gap-10 mx-15 pt-6 pb-5 px-10 border border-accent dark:border-dark-accent rounded-lg mb-5">
+                <div className="flex justify-center gap-10 mx-15 pt-6 pb-5 px-10 border border-accent dark:border-dark-accent rounded-md mb-5">
                     {tabs.map((tab, i) => {
                         const Icon = tab.icon
                         const isActive = active === tab.name

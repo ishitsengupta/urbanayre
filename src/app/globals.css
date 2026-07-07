@@ -54,6 +54,35 @@
     background: var(--dark-text-primary);
     color: var(--text-primary);
   }
+  ::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--glass-bg);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: var(--dark-glass-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--dark-accent);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-dark);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-accent-dark);
+}
 }
 
 @theme {

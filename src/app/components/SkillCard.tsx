@@ -33,19 +33,19 @@ export default function SkillCard({icon, imageAlt, title, desc, level, num, prof
 
   const isDark = resolvedTheme === 'dark'
     return(
-        <div className="relative w-full max-w-md rounded-2xl dark:border dark:border-dark-accent border border-accent p-8 dark:shadow-[0_8px_32px_rgba(0,0,0,0.35)] shadow-[0_8px_32px_rgba(26,26,24,0.05)]" style={{
+        <div className="relative w-full max-w-md rounded-md dark:border dark:border-dark-accent border border-accent p-8 dark:shadow-[0_8px_32px_rgba(0,0,0,0.35)] shadow-[0_8px_32px_rgba(26,26,24,0.05)]" style={{
   background: isDark
     ? 'radial-gradient(circle at 90% -10%, rgba(91,126,193,0.18), transparent 55%), radial-gradient(circle at -10% 110%, rgba(91,126,193,0.13), transparent 55%), #0d1017'
     : 'radial-gradient(circle at 90% -10%, rgba(212,175,55,0.22), transparent 55%), radial-gradient(circle at -10% 110%, rgba(212,175,55,0.16), transparent 55%), #faf7f2'
 }}>
       
       {/* icon box */}
-      <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl dark:bg-dark-glass bg-glass dark:border dark:border-dark-accent border border-accent">
+      <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-md dark:bg-dark-glass bg-glass dark:border dark:border-dark-accent border border-accent">
         <Image src={icon} alt={imageAlt} height={60} width={60}></Image>
       </div>
 
       {/* expert badge */}
-      <div className="absolute right-8 top-8 flex items-center gap-2 rounded-full dark:border dark:border-dark-accent border border-accent dark:bg-dark-glass bg-glass px-4 py-1.5">
+      <div className="absolute right-8 top-8 flex items-center gap-2 rounded-xl dark:border dark:border-dark-accent border border-accent dark:bg-dark-glass bg-glass px-4 py-1.5">
         <span className="h-2 w-2 rounded-full" style={{background: color}} />
         <span className="text-sm font-serif font-medium dark:text-dark-text-primary text-text-primary">{level}</span>
       </div>

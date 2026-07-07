@@ -1,6 +1,4 @@
 "use client";
-import Image from 'next/image';
-import Link from 'next/link';
 import { ArrowRight, MessageCircle, Code2, Box, Database, Wrench } from "lucide-react";
 import { useRouter } from "next/navigation";
 import SkillCard from './components/SkillCard';
@@ -27,11 +25,11 @@ export default function Home(){
                 <h1 className="introtext">Hi, I&apos;m <span className="text-[#c19a5b] dark:text-[#5b7ec1]">Ishit</span> <p>Full Stack Developer</p></h1>
                 <p className="introtext1">On a mission to learn many different frameworks and build projects on it</p>
                 <div className='flex flex-row gap-[20px] mt-[10px]'>
-                    <button onClick={() => router.push('/project')} className="group flex items-center gap-2 rounded-full bg-[#c19a5b] dark:bg-[#5b7ec1] px-6 py-3 text-sm font-medium text-text-primary dark:text-[#f2f0eb] transition-transform duration-200 hover:scale-[1.03] hover:bg-[#c19a5b] dark:hover:bg-[#3e6ba4] active:scale-95 cursor-pointer">
+                    <button onClick={() => router.push('/project')} className="group flex items-center gap-2 rounded-lg bg-[#c19a5b] dark:bg-[#5b7ec1] px-6 py-3 text-sm font-medium text-text-primary dark:text-[#f2f0eb] transition-transform duration-200 hover:scale-[1.03] hover:bg-[#c19a5b] dark:hover:bg-[#3e6ba4] active:scale-95 cursor-pointer">
                         View My Work
                         <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
                     </button>
-                    <button onClick={() => router.push('/contacts')} className="flex items-center gap-2 rounded-full dark:border dark:border-dark-text-primary border border-text-primary dark:bg-slate/5 bg-white/5  px-6 py-3 text-sm font-medium dark:text-dark-text-primary text-text-primary transition-all duration-200 dark:hover:bg-slate/10 hover:bg-white/10 hover:scale-[1.03] cursor-pointer active:scale-95">
+                    <button onClick={() => router.push('/contacts')} className="flex items-center gap-2 rounded-lg dark:border dark:border-dark-text-primary border border-text-primary dark:bg-slate/5 bg-white/5  px-6 py-3 text-sm font-medium dark:text-dark-text-primary text-text-primary transition-all duration-200 dark:hover:bg-slate/10 hover:bg-white/10 hover:scale-[1.03] cursor-pointer active:scale-95">
                         Contact Me
                         <MessageCircle className="h-4 w-4" />
                     </button>
@@ -41,10 +39,10 @@ export default function Home(){
                 
             </div>
             </div>
-            <div className="overflow-hidden items-center rounded-2xl justify-center dark:bg-dark-glass bg-glass mx-15 mt-[50px] mb-[20px] max-w-full max-h-full">
+            <div className="overflow-hidden items-center rounded-md justify-center dark:bg-dark-glass bg-glass mx-15 mt-[50px] mb-[20px] max-w-full max-h-full">
       
 
-      <div className="overflow-hidden flex flex-wrap items-center justify-between rounded-2xl dark:border dark:border-dark-text-secondary border border-text-secondary dark:bg-dark-glass bg-glass p-4 backdrop-blur-[6px] ">
+      <div className="overflow-hidden flex flex-wrap items-center justify-between rounded-md dark:border dark:border-dark-text-secondary border border-text-secondary dark:bg-dark-glass bg-glass p-4 backdrop-blur-[6px] ">
         {skills.map(({ icon: Icon, title, desc }, i) => (
           <div
             key={title}
@@ -52,7 +50,7 @@ export default function Home(){
               i !== 0 ? "border-l border-accent-dark dark:border-l dark:border-dark-accent-dark" : ""
             }`}
           >
-            <div className="overflow-hidden flex h-10 w-10 items-center justify-center rounded-lg dark:bg-dark-glass bg-glass dark:border dark:border-dark-accent border border-accent">
+            <div className="overflow-hidden flex h-10 w-10 items-center justify-center rounded-md dark:bg-dark-glass bg-glass dark:border dark:border-dark-accent border border-accent">
               <Icon className="h-4 w-4 dark:text-dark-accent text-accent" />
             </div>
             <div>
@@ -63,7 +61,7 @@ export default function Home(){
         ))}
       </div>
     </div>
-    <div className='flex flex-col dark:bg-dark-glass bg-glass rounded-lg dark:border-[1px] border-[1px] dark:border-dark-text-secondary border-text-secondary mb-[50px] mt-[50px] mx-15 overflow-hidden max-w-full max-h-full'>
+    <div className='flex flex-col dark:bg-dark-glass bg-glass rounded-md dark:border-[1px] border-[1px] dark:border-dark-text-secondary border-text-secondary mb-[50px] mt-[50px] mx-15 overflow-hidden max-w-full max-h-full'>
         <div className='flex flex-col mx-8 my-8 overflow-hidden'>
             <p className='text-[15px] font-[500] dark:text-dark-accent-dark text-accent-dark tracking-[1px] font-serif italic mb-2'>Skills</p>
             <h1 className='text-[35px] font-[700] font-serif tracking-[1px] mb-1'><span className='dark:text-dark-accent text-accent'>Tech</span> Stack I Work With</h1>
@@ -81,7 +79,7 @@ export default function Home(){
             <SkillCard title='Git' imageAlt='git-logo' icon='/git.svg' desc='Version Control' level='Expert' about='Github Framework, Tracks Changes on Your Repositories.' prof="95%" num={3} exp={2} color={expert} note='Highly Proficient' />
         </div>
         <div className='justify-center items-center my-10 mx-auto h-auto w-auto'>
-            <button onClick={() => router.push('/skill')} className="group flex items-center gap-2 rounded-full dark:bg-dark-accent bg-[#c19a5b] px-6 py-3 text-sm font-medium dark:text-dark-text-primary text-text-primary transition-transform duration-200 hover:scale-[1.03] hover:bg-[#c19a5b] dark:hover:bg-dark-accent-dark active:scale-95 cursor-pointer">
+            <button onClick={() => router.push('/skill')} className="group flex items-center gap-2 rounded-lg dark:bg-dark-accent bg-[#c19a5b] px-6 py-3 text-sm font-medium dark:text-dark-text-primary text-text-primary transition-transform duration-200 hover:scale-[1.03] hover:bg-[#c19a5b] dark:hover:bg-dark-accent-dark active:scale-95 cursor-pointer">
                         View All Skills
                         <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
                     </button>

@@ -1,7 +1,7 @@
 # My Portfolio
 
 Welcome to my portfolio website.
-- portfolio v0.2.0
+- portfolio v0.3.0
 
 ## Tech Stack
 
