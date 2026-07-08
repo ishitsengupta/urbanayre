@@ -2,18 +2,29 @@
 import { ArrowRight, MessageCircle, Code2, Box, Database, Wrench } from "lucide-react";
 import { useRouter } from "next/navigation";
 import SkillCard from './components/SkillCard';
+import { projects } from '@/app/data/projects';
+import ProjectCard from '@/app/components/ProjectCard';
 
 export default function Home(){
     const skills = [
-  { icon: Code2, title: "Frontend", desc: "React, Next.js, Tailwind CSS" },
-  { icon: Box, title: "Backend", desc: "Node.js, Express, MongoDB" },
-  { icon: Database, title: "Database", desc: "MongoDB, PostgreSQL" },
-  { icon: Wrench, title: "Tools", desc: "Git, VS Code, Figma" },
-];
+      { icon: Code2, title: "Frontend", desc: "React, Next.js, Tailwind CSS" },
+      { icon: Box, title: "Backend", desc: "Node.js, Express, MongoDB" },
+      { icon: Database, title: "Database", desc: "MongoDB, PostgreSQL" },
+      { icon: Wrench, title: "Tools", desc: "Git, VS Code, Figma" },
+    ];
     const router = useRouter();
     const beginner = "#05ec37d0";
     const mediocre = "#eeff00d0";
     const expert = "#ff0000";
+    const active = "Featured";
+    const filtered = active === "Featured"? projects.filter(p => p.cat.includes("Featured")) : projects.filter(p => p.cat.includes("Featured"))
+    const isActive = active === "Featured"
+    let emptystate = false;
+    if(filtered.length === 0) {
+        emptystate = true;
+    } else {
+        emptystate = false
+    }
     return(
         <div className='flex flex-col'>
             <div className="flex flex-row">
@@ -42,7 +53,7 @@ export default function Home(){
             <div className="overflow-hidden items-center rounded-md justify-center dark:bg-dark-glass bg-glass mx-15 mt-[50px] mb-[20px] max-w-full max-h-full">
       
 
-      <div className="overflow-hidden flex flex-wrap items-center justify-between rounded-md dark:border dark:border-dark-text-secondary border border-text-secondary dark:bg-dark-glass bg-glass p-4 backdrop-blur-[6px] ">
+      <div className="overflow-hidden flex flex-wrap items-center justify-between rounded-md border dark:border-dark-accent  border-accent dark:bg-dark-glass bg-glass p-4 backdrop-blur-[6px] ">
         {skills.map(({ icon: Icon, title, desc }, i) => (
           <div
             key={title}
@@ -61,7 +72,7 @@ export default function Home(){
         ))}
       </div>
     </div>
-    <div className='flex flex-col dark:bg-dark-glass bg-glass rounded-md dark:border-[1px] border-[1px] dark:border-dark-text-secondary border-text-secondary mb-[50px] mt-[50px] mx-15 overflow-hidden max-w-full max-h-full'>
+    <div className='flex flex-col dark:bg-dark-glass bg-glass rounded-md dark:border-[1px] border-[1px] dark:border-dark-accent border-accent mb-[50px] mt-[50px] mx-15 overflow-hidden max-w-full max-h-full'>
         <div className='flex flex-col mx-8 my-8 overflow-hidden'>
             <p className='text-[15px] font-[500] dark:text-dark-accent-dark text-accent-dark tracking-[1px] font-serif italic mb-2'>Skills</p>
             <h1 className='text-[35px] font-[700] font-serif tracking-[1px] mb-1'><span className='dark:text-dark-accent text-accent'>Tech</span> Stack I Work With</h1>
@@ -85,7 +96,22 @@ export default function Home(){
                     </button>
         </div>
     </div>
+    <div className="flex flex-col mb-[50px] mx-15 border border-accent dark:border-dark-accent rounded-md px-8 py-8">
+      <p className='text-[15px] font-[500] dark:text-dark-accent-dark text-accent-dark tracking-[1px] font-serif italic mb-2'>Featured Projects</p>
+      <h1 className='text-[35px] font-[700] font-serif tracking-[1px]'><span className='dark:text-dark-accent text-accent'>Latest</span> Projects Built by Me</h1>
+      <div className="grid grid-cols-2 gap-5 mt-10 mb-10">
+        {filtered.map(projects => (
+           <ProjectCard key={projects.title} {...projects} />
+        ))}
+      </div>
+      <div className='justify-center items-center my-10 mx-auto h-auto w-auto'>
+            <button onClick={() => router.push('/project')} className="group flex items-center gap-2 rounded-lg dark:bg-dark-accent bg-[#c19a5b] px-6 py-3 text-sm font-medium dark:text-dark-text-primary text-text-primary transition-transform duration-200 hover:scale-[1.03] hover:bg-[#c19a5b] dark:hover:bg-dark-accent-dark active:scale-95 cursor-pointer">
+                        View All Projects
+                        <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
+                    </button>
         </div>
+    </div>
+    </div>
         
         
     )

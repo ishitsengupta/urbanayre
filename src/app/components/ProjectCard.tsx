@@ -44,28 +44,25 @@ export default function ProjectCard({
 
   const isDark = resolvedTheme === 'dark'
   return (
-    <div className="max-w-[680px] border border-accent dark:border-dark-accent rounded-2xl px-8 py-7 font-serif" style={{
+    <div className="max-w-[680px] border border-accent dark:border-dark-accent rounded-md px-8 py-7 font-serif" style={{
   background: isDark
     ? 'radial-gradient(circle at 90% -10%, rgba(91,126,193,0.18), transparent 55%), radial-gradient(circle at -10% 110%, rgba(91,126,193,0.13), transparent 55%), #0d1017'
     : 'radial-gradient(circle at 90% -10%, rgba(212,175,55,0.22), transparent 55%), radial-gradient(circle at -10% 110%, rgba(212,175,55,0.16), transparent 55%), #faf7f2'
 }}>
       <div className="flex justify-between items-center mb-5">
-        {Featured && (
-            <div className="flex justify-between items-center gap-90">
-                <span className="inline-flex items-center gap-1.5 bg-accent/10 dark:bg-dark-accent/10 text-text-primary dark:text-dark-text-primary text-[12px] px-3 py-1 rounded-full border border-accent/30 dark:border-dark-accent/30">
-                    <Star size={13} className="text-accent dark:text-dark-accent" />
-                     Featured project
-                </span>
-                <span className="w-[34px] h-[34px] rounded-lg border border-accent dark:border-dark-accent flex items-center justify-center text-accent dark:text-dark-accent ml-auto">
-                    <CodeXml size={16} />
-                </span>
-            </div>
-          
-          
-        )}
-        
+  {Featured && (
+    <div className="flex items-center justify-between w-full">
+      <div className="inline-flex items-center gap-1.5 bg-accent/10 dark:bg-dark-accent/10 text-text-primary dark:text-dark-text-primary text-[12px] px-3 py-1 rounded-full border border-accent/30 dark:border-dark-accent/30">
+        <Star size={13} className="text-accent dark:text-dark-accent" />
+        Featured project
       </div>
-      <div className="relative aspect-video rounded-lg overflow-hidden border border-accent dark:border-dark-accent mb-5">
+      <div className="w-[34px] h-[34px] rounded-lg border border-accent dark:border-dark-accent flex items-center justify-center text-accent dark:text-dark-accent">
+        <CodeXml size={16} />
+      </div>
+    </div>
+  )}
+</div>
+      <div className="relative aspect-video rounded-md overflow-hidden border border-accent dark:border-dark-accent mb-5">
             <Image src={image} alt={title} sizes="auto" fill className="object-cover" />
       </div>
       <h1 className="text-[26px] font-[500] text-text-primary dark:text-dark-text-primary mb-1">{title}</h1>

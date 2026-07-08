@@ -33,7 +33,7 @@ export default function SkillCard({icon, imageAlt, title, desc, level, num, prof
 
   const isDark = resolvedTheme === 'dark'
     return(
-        <div className="relative w-full max-w-md rounded-md dark:border dark:border-dark-accent border border-accent p-8 dark:shadow-[0_8px_32px_rgba(0,0,0,0.35)] shadow-[0_8px_32px_rgba(26,26,24,0.05)]" style={{
+        <div className="relative w-full max-w-[680px] rounded-md dark:border dark:border-dark-accent border border-accent p-8 dark:shadow-[0_8px_32px_rgba(0,0,0,0.35)] shadow-[0_8px_32px_rgba(26,26,24,0.05)]" style={{
   background: isDark
     ? 'radial-gradient(circle at 90% -10%, rgba(91,126,193,0.18), transparent 55%), radial-gradient(circle at -10% 110%, rgba(91,126,193,0.13), transparent 55%), #0d1017'
     : 'radial-gradient(circle at 90% -10%, rgba(212,175,55,0.22), transparent 55%), radial-gradient(circle at -10% 110%, rgba(212,175,55,0.16), transparent 55%), #faf7f2'

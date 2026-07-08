@@ -3,7 +3,7 @@ import NavLink from "./Navlink";
 export default function Footer() {
   const year = new Date().getFullYear()
   return (
-    <footer className="site-footer mx-2 dark:border-[0.1px] dark:border-[rgba(255,255,255,0.21)] border-[0.1px] border-[rgba(0,0,0,0.21)] rounded-lg">
+    <footer className="site-footer max-w-screen mx-2 dark:border-[0.1px] dark:border-[rgba(255,255,255,0.21)] border-[0.1px] border-[rgba(0,0,0,0.21)] rounded-lg">
       <div className="footer-glass">
         <div className="footer-top">
           <p className="footer-eyebrow">Got something in mind?</p>
