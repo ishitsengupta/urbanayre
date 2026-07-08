@@ -38,7 +38,7 @@ export default function About(){
                     <p className='text-[15px] font-[500] text-accent dark:text-dark-accent'>What Drives Me</p>
                     <h1 className='text-[30px] font-[500] text-text-primary dark:text-dark-text-primary'>Curiosity. Consistency. <br />Impact.</h1>
                     <p className='text-[15px] font-[300] text-text-secondary dark:text-dark-text-secondary'>I&apos;m constantly learning and exploring new tech domains to build better, faster and more meaningful products.</p>
-                    <button onClick={() => router.push('/project')} className="group gap-[20px] max-w-[50%] mt-10 flex items-center gap-2 rounded-md bg-accent dark:bg-dark-accent px-6 py-3 text-sm font-medium text-text-primary dark:text-dark-text-primary transition-transform duration-200 hover:scale-[1.03] hover:bg-accent-dark dark:hover:bg-dark-accent-dark active:scale-95 cursor-pointer">
+                    <button onClick={() => router.push('/contacts')} className="group gap-[20px] max-w-[50%] mt-10 flex items-center gap-2 rounded-md bg-accent dark:bg-dark-accent px-6 py-3 text-sm font-medium text-text-primary dark:text-dark-text-primary transition-transform duration-200 hover:scale-[1.03] hover:bg-accent-dark dark:hover:bg-dark-accent-dark active:scale-95 cursor-pointer">
                         Let's Connect
                         <MoveRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
                     </button>
