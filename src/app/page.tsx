@@ -29,18 +29,18 @@ export default function Home(){
         <div className='flex flex-col'>
             <div className="flex flex-row">
             <div className="flex flex-col px-15 py-5 gap-[15px]">
-                <div className="w-max flex items-center gap-2 rounded-full dark:border dark:border-dark-accent border border-accent dark:bg-dark-glass bg-glass px-4 py-1.5">
+                <div className="homeskillbox w-max flex items-center gap-2 rounded-full dark:border dark:border-dark-accent border border-accent shadow-glass-shadow dark:shadow-dark-glass-shadow dark:bg-dark-glass bg-glass px-4 py-1.5">
                   <span className="h-2 w-2 rounded-full" style={{background: beginner}} />
                   <span className="text-sm font-serif font-medium dark:text-dark-text-primary text-text-primary">Under Construction</span>
                 </div>
                 <h1 className="introtext">Hi, I&apos;m <span className="text-[#c19a5b] dark:text-[#5b7ec1]">Ishit</span> <p>Full Stack Developer</p></h1>
                 <p className="introtext1">On a mission to learn many different frameworks and build projects on it</p>
                 <div className='flex flex-row gap-[20px] mt-[10px]'>
-                    <button onClick={() => router.push('/project')} className="group flex items-center gap-2 rounded-lg bg-[#c19a5b] dark:bg-[#5b7ec1] px-6 py-3 text-sm font-medium text-text-primary dark:text-[#f2f0eb] transition-transform duration-200 hover:scale-[1.03] hover:bg-[#c19a5b] dark:hover:bg-[#3e6ba4] active:scale-95 cursor-pointer">
+                    <button onClick={() => router.push('/project')} className="shadow-glass-shadow dark:shadow-dark-glass-shadow group flex items-center gap-2 rounded-lg bg-[#c19a5b] dark:bg-[#5b7ec1] px-6 py-3 text-sm font-medium text-text-primary dark:text-[#f2f0eb] transition-transform duration-200 hover:scale-[1.03] hover:bg-[#c19a5b] dark:hover:bg-[#3e6ba4] active:scale-95 cursor-pointer">
                         View My Work
                         <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
                     </button>
-                    <button onClick={() => router.push('/contacts')} className="flex items-center gap-2 rounded-lg dark:border dark:border-dark-text-primary border border-text-primary dark:bg-slate/5 bg-white/5  px-6 py-3 text-sm font-medium dark:text-dark-text-primary text-text-primary transition-all duration-200 dark:hover:bg-slate/10 hover:bg-white/10 hover:scale-[1.03] cursor-pointer active:scale-95">
+                    <button onClick={() => router.push('/contacts')} className="shadow-glass-shadow dark:shadow-dark-glass-shadow flex items-center gap-2 rounded-lg dark:border dark:border-dark-text-primary border border-text-primary dark:bg-slate/5 bg-white/5  px-6 py-3 text-sm font-medium dark:text-dark-text-primary text-text-primary transition-all duration-200 dark:hover:bg-slate/10 hover:bg-white/10 hover:scale-[1.03] cursor-pointer active:scale-95">
                         Contact Me
                         <MessageCircle className="h-4 w-4" />
                     </button>
@@ -50,10 +50,10 @@ export default function Home(){
                 
             </div>
             </div>
-            <div className="overflow-hidden items-center rounded-md justify-center dark:bg-dark-glass bg-glass mx-15 mt-[50px] mb-[20px] max-w-full max-h-full">
+            <div className="overflow-hidden items-center rounded-md shadow-glass-shadow dark:shadow-dark-glass-shadow justify-center dark:bg-dark-glass bg-glass mx-15 mt-[50px] mb-[20px] max-w-full max-h-full">
       
 
-      <div className="overflow-hidden flex flex-wrap items-center justify-between rounded-md border dark:border-dark-accent  border-accent dark:bg-dark-glass bg-glass p-4 backdrop-blur-[6px] ">
+      <div className="homeskillbox overflow-hidden flex flex-wrap items-center justify-between rounded-md border dark:border-dark-accent  border-accent dark:bg-dark-glass bg-glass p-4 backdrop-blur-[6px]">
         {skills.map(({ icon: Icon, title, desc }, i) => (
           <div
             key={title}
@@ -72,7 +72,7 @@ export default function Home(){
         ))}
       </div>
     </div>
-    <div className='flex flex-col dark:bg-dark-glass bg-glass rounded-md dark:border-[1px] border-[1px] dark:border-dark-accent border-accent mb-[50px] mt-[50px] mx-15 overflow-hidden max-w-full max-h-full'>
+    <div className='flex flex-col shadow-glass-shadow dark:shadow-dark-glass-shadow dark:bg-dark-glass bg-glass rounded-md dark:border-[1px] border-[1px] dark:border-dark-accent border-accent mb-[50px] mt-[50px] mx-15 overflow-hidden max-w-full max-h-full'>
         <div className='flex flex-col mx-8 my-8 overflow-hidden'>
             <p className='text-[15px] font-[500] dark:text-dark-accent-dark text-accent-dark tracking-[1px] font-serif italic mb-2'>Skills</p>
             <h1 className='text-[35px] font-[700] font-serif tracking-[1px] mb-1'><span className='dark:text-dark-accent text-accent'>Tech</span> Stack I Work With</h1>
@@ -90,13 +90,13 @@ export default function Home(){
             <SkillCard title='Git' imageAlt='git-logo' icon='/git.svg' desc='Version Control' level='Expert' about='Github Framework, Tracks Changes on Your Repositories.' prof="95%" num={3} exp={2} color={expert} note='Highly Proficient' />
         </div>
         <div className='justify-center items-center my-10 mx-auto h-auto w-auto'>
-            <button onClick={() => router.push('/skill')} className="group flex items-center gap-2 rounded-lg dark:bg-dark-accent bg-[#c19a5b] px-6 py-3 text-sm font-medium dark:text-dark-text-primary text-text-primary transition-transform duration-200 hover:scale-[1.03] hover:bg-[#c19a5b] dark:hover:bg-dark-accent-dark active:scale-95 cursor-pointer">
+            <button onClick={() => router.push('/skill')} className="shadow-glass-shadow dark:shadow-dark-glass-shadow group flex items-center gap-2 rounded-lg dark:bg-dark-accent bg-[#c19a5b] px-6 py-3 text-sm font-medium dark:text-dark-text-primary text-text-primary transition-transform duration-200 hover:scale-[1.03] hover:bg-[#c19a5b] dark:hover:bg-dark-accent-dark active:scale-95 cursor-pointer">
                         View All Skills
                         <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
                     </button>
         </div>
     </div>
-    <div className="flex flex-col mb-[50px] mx-15 border border-accent dark:border-dark-accent rounded-md px-8 py-8">
+    <div className="flex flex-col mb-[50px] mx-15 shadow-glass-shadow dark:shadow-dark-glass-shadow border border-accent dark:border-dark-accent rounded-md px-8 py-8">
       <p className='text-[15px] font-[500] dark:text-dark-accent-dark text-accent-dark tracking-[1px] font-serif italic mb-2'>Featured Projects</p>
       <h1 className='text-[35px] font-[700] font-serif tracking-[1px]'><span className='dark:text-dark-accent text-accent'>Latest</span> Projects Built by Me</h1>
       <div className="grid grid-cols-2 gap-5 mt-10 mb-10">
@@ -105,7 +105,7 @@ export default function Home(){
         ))}
       </div>
       <div className='justify-center items-center my-10 mx-auto h-auto w-auto'>
-            <button onClick={() => router.push('/project')} className="group flex items-center gap-2 rounded-lg dark:bg-dark-accent bg-[#c19a5b] px-6 py-3 text-sm font-medium dark:text-dark-text-primary text-text-primary transition-transform duration-200 hover:scale-[1.03] hover:bg-[#c19a5b] dark:hover:bg-dark-accent-dark active:scale-95 cursor-pointer">
+            <button onClick={() => router.push('/project')} className="shadow-glass-shadow dark:shadow-dark-glass-shadow group flex items-center gap-2 rounded-lg dark:bg-dark-accent bg-[#c19a5b] px-6 py-3 text-sm font-medium dark:text-dark-text-primary text-text-primary transition-transform duration-200 hover:scale-[1.03] hover:bg-[#c19a5b] dark:hover:bg-dark-accent-dark active:scale-95 cursor-pointer">
                         View All Projects
                         <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
                     </button>

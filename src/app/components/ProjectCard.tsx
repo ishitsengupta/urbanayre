@@ -44,7 +44,7 @@ export default function ProjectCard({
 
   const isDark = resolvedTheme === 'dark'
   return (
-    <div className="max-w-[680px] border border-accent dark:border-dark-accent rounded-md px-8 py-7 font-serif" style={{
+    <div className="max-w-[680px] shadow-glass-shadow dark:shadow-dark-glass-shadow border border-accent dark:border-dark-accent rounded-md px-8 py-7 font-serif" style={{
   background: isDark
     ? 'radial-gradient(circle at 90% -10%, rgba(91,126,193,0.18), transparent 55%), radial-gradient(circle at -10% 110%, rgba(91,126,193,0.13), transparent 55%), #0d1017'
     : 'radial-gradient(circle at 90% -10%, rgba(212,175,55,0.22), transparent 55%), radial-gradient(circle at -10% 110%, rgba(212,175,55,0.16), transparent 55%), #faf7f2'

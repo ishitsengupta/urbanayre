@@ -1,11 +1,11 @@
 # My Portfolio
 
 Welcome to my portfolio website.
-- v0.4.0: About me Update
+
+- v0.5.0 Contacts page Update
 
 ## Future Updates
 
-- v0.5.0 Contacts page Update
 - v0.6.0: Mobile and Tablet view Update
 - v0.7.0: SEO Optimization Update
 - v0.8.0: 404 Page Update

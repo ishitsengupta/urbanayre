@@ -27,6 +27,12 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 @layer base{
   body{
     font: 'Fraunces', Georgia, sans-serif;
@@ -90,6 +96,7 @@
   --color-bg-2: #e8e5de;
   --color-glass: rgba(255,255,255,0.06);
   --color-glass-border: rgba(255,255,255,0.21);
+  --shadow-glass-shadow: 0 8px 32px rgba(26,26,24,0.35);
   --color-text-primary: #1a1a18;
   --color-text-secondary: #8c897f;
   --color-text-muted: #a8a59a;
@@ -99,6 +106,7 @@
   --color-dark-bg-2: #1c1a15;
   --color-dark-glass: rgba(255,255,255,0.06);
   --color-dark-glass-border: rgba(255,255,255,0.21);
+  --shadow-dark-glass-shadow: 0 8px 32px rgba(0,0,0,0.35);
   --color-dark-text-primary: #f2f0eb;
   --color-dark-text-secondary: #b3afa3;
   --color-dark-text-muted: #7a776c;
@@ -498,6 +506,14 @@
 
 .dark .footer-socials a:hover {
   color: var(--dark-accent-dark);
+}
+
+.homeskillbox{
+  background: radial-gradient(circle at 90% -10%, rgba(212,175,55,0.22), transparent 65%), radial-gradient(circle at -10% 110%, rgba(212,175,55,0.16), transparent 65%),#faf7f2;
+}
+
+.dark .homeskillbox {
+  background: radial-gradient(circle at 90% -10%, rgba(91,126,193,0.18), transparent 75%), radial-gradient(circle at -10% 110%, rgba(91,126,193,0.13), transparent 75%), #0d1017;
 }
 
 }
