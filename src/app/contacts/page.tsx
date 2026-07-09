@@ -195,10 +195,10 @@ export default function Contacts(){
                     <Coffee size={50} className='text-accent dark:text-dark-accent px-[10px] py-[10px] border border-accent dark:border-dark-accent rounded-md bg-glass-border dark:bg-dark-glass-border' />
                     <h1 className='font-serif text-[25px] font-[500]'>Let&apos;s build something great.</h1>
                     <p className='font-serif text-[15px] font-[300]'>wheather you have a project in mind or just want to chat, i&apos;d love to hear from you.</p>
-                    <button type='submit' className="shadow-glass-shadow dark:shadow-dark-glass-shadow group gap-[20px] w-full mt-10 flex justify-center items-center gap-2 rounded-md bg-accent dark:bg-dark-accent px-6 py-3 text-sm font-medium text-text-primary dark:text-dark-text-primary transition-transform duration-200 hover:scale-[1.03] hover:bg-accent-dark dark:hover:bg-dark-accent-dark active:scale-95 cursor-pointer">
+                    <a href='mailto:ishitsengupta@gmail.com' className="shadow-glass-shadow dark:shadow-dark-glass-shadow group gap-[20px] w-full mt-10 flex justify-center items-center gap-2 rounded-md bg-accent dark:bg-dark-accent px-6 py-3 text-sm font-medium text-text-primary dark:text-dark-text-primary transition-transform duration-200 hover:scale-[1.03] hover:bg-accent-dark dark:hover:bg-dark-accent-dark active:scale-95 cursor-pointer">
                         Let&apos;s Connect
                         <MoveRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
