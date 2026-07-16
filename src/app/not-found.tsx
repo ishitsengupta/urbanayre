@@ -4,7 +4,7 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 
 export default function NotFound() {
-  const [clicks, setClicks] = useState(49)
+  const [clicks, setClicks] = useState(0)
   const [showModal, setShowModal] = useState(false)
   const [glitch, setGlitch] = useState(false)
   const router = useRouter()
